@@ -1,8 +1,6 @@
 #!/bin/sh
 set -eu
 
-[ -n "$INPUT_STRIP_COMPONENTS" ] && export INPUT_STRIP_COMPONENTS=$((INPUT_STRIP_COMPONENTS + 0))
-
 send_to_groups_custom() {
   curl -X POST "https://kapi.kakao.com/v1/api/talk/friends/message/default/send" \
        -H "Authorization: Bearer ${INPUT_KAKAO_ACCESS_TOKEN}" \
