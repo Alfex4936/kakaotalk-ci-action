@@ -1,0 +1,22 @@
+name: Example CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Send KakaoTalk notification
+        uses: Alfex4936/kakaotalk-ci-action@v1
+        with:
+          kakao_access_token: ${{ secrets.KAKAO_ACCESS_TOKEN }}
+          function_name: send_to_me_custom
+          template_id: "93112"
+          template_args: '{"title": "제목", "desc": "설명"}'

@@ -1,0 +1,7 @@
+name: "KakaoTalk CI Action"
+description: "A Github action for KakaoTalk CI"
+
+inputs:
+  kakao_access_token:
+    description: "The KakaoTalk API access token"
+    required: true
