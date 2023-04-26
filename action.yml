@@ -1,4 +1,6 @@
 name: "KakaoTalk CI Action"
+author: "Seok Won <ikr@kakao.com>"
+
 description: "A Github action for KakaoTalk CI"
 
 inputs:
@@ -29,3 +31,7 @@ runs:
         INPUT_TEMPLATE_ID: ${{ inputs.template_id }}
         INPUT_TEMPLATE_ARGS: ${{ inputs.template_args }}
         INPUT_RECEIVER_UUIDS: ${{ inputs.receiver_uuids }}
+
+branding:
+  icon: 'message-circle'
+  color: 'yellow'
