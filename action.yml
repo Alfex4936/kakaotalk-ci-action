@@ -5,3 +5,27 @@ inputs:
   kakao_access_token:
     description: "The KakaoTalk API access token"
     required: true
+  function_name:
+    description: "The function to execute (send_to_groups_custom or send_to_me_custom)"
+    required: true
+  template_id:
+    description: "The template ID for the message"
+    required: false
+  template_args:
+    description: "The template arguments for the message"
+    required: false
+  receiver_uuids:
+    description: "The receiver UUIDs for the message (only required for send_to_groups_custom)"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/entrypoint.sh
+      shell: bash
+      env:
+        INPUT_KAKAO_ACCESS_TOKEN: ${{ inputs.kakao_access_token }}
+        INPUT_FUNCTION_NAME: ${{ inputs.function_name }}
+        INPUT_TEMPLATE_ID: ${{ inputs.template_id }}
+        INPUT_TEMPLATE_ARGS: ${{ inputs.template_args }}
+        INPUT_RECEIVER_UUIDS: ${{ inputs.receiver_uuids }}
