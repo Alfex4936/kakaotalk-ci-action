@@ -18,5 +18,5 @@ jobs:
         with:
           kakao_access_token: ${{ secrets.KAKAO_ACCESS_TOKEN }}
           function_name: send_to_me_custom
-          template_id: "93112"
-          template_args: '{"title": "제목", "desc": "설명"}'
+          template_id: "101722"
+          template_args: '{"title": "Jacoco 테스트 완료", "desc": "Github Action에서 코드 커버리지를 완료했습니다."}'
