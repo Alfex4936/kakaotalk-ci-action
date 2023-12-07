@@ -67,6 +67,8 @@ jobs:
 
 `KAKAO_ACCESS_TOKEN` 을 [@카카오 문서](https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api#kakaologin)를 참고해서 얻는다.
 
+또는 `[도구] - [REST API 테스트] - 인증 앱 선택 후 ACCESS TOKEN을 발급`
+
 ![image](https://user-images.githubusercontent.com/2356749/234553798-7ef4ef66-086e-4216-81b4-c2b3646c9b0a.png)
 
 ![image](https://user-images.githubusercontent.com/2356749/234553984-65ef7827-9999-4e2f-b878-93bcb0a3830e.png)
